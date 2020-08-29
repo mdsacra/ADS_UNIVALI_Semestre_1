@@ -1,0 +1,10 @@
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\Calculadora\bin\Debug\Calculadora.exe.config
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\Calculadora\bin\Debug\Calculadora.exe
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\Calculadora\bin\Debug\Calculadora.pdb
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\Calculadora\obj\Debug\Calculadora.csprojAssemblyReference.cache
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\Calculadora\obj\Debug\Calculadora.Properties.Resources.resources
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\Calculadora\obj\Debug\Calculadora.csproj.GenerateResource.cache
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\Calculadora\obj\Debug\Calculadora.exe
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\Calculadora\obj\Debug\Calculadora.pdb
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\Calculadora\obj\Debug\Calculadora.calc.resources
