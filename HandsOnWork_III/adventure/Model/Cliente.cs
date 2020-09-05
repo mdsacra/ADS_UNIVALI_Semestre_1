@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Colaborador
+    public class Cliente
     {
         private int id;
         private string nome;
+        private string telefone;
+        private DateTime dtNasc;
         private string cpf;
-        private string cargo;
-        private Double salario;
-        private DateTime dtAdmissao;
-
+        private string email;
+        private DateTime dtCadastro;
     }
 }

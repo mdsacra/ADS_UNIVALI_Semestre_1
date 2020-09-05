@@ -15,10 +15,10 @@ namespace Controller
 
         int id { get; set; }
         string nome { get; set; }
-        DateTime dtNasc { get; set; }
+        string cargo { get; set; }
         string cpf { get; set; }
-        string email { get; set; }
-        DateTime dtCadastro { get; set; }
+        Double salario { get; set; }
+        DateTime dtAdmissao { get; set; }
 
 
     }
