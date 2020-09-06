@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Pacote
+    public class Pacote
     {
         private int id;
         private string cidade;

@@ -9,13 +9,13 @@ namespace Controller
 {
     public interface IColabView
     {
-        void SetController(ColaboradorController controller);
+        void SetController(ColaboradorController colaboradorController);
         void AddColaborador(Colaborador colaborador);
         void RemoveColaborador(Colaborador colaborador);
 
         int id { get; set; }
         string nome { get; set; }
-        string cargo { get; set; }
+        Departamento dpto  { get; set; }
         string cpf { get; set; }
         Double salario { get; set; }
         DateTime dtAdmissao { get; set; }

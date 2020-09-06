@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Colaborador
+    public class ResponsavelEmpresa
     {
-        private int id;
         private string nome;
         private string cpf;
-        private Departamento dpto;
-        private Double salario;
-        private DateTime dtAdmissao;
-
     }
 }

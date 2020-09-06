@@ -52,12 +52,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form10.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form10.Designer.cs">
-      <DependentUpon>Form10.cs</DependentUpon>
-    </Compile>
     <Compile Include="EscolhaCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,9 +116,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form10.resx">
-      <DependentUpon>Form10.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EscolhaCadastro.resx">
       <DependentUpon>EscolhaCadastro.cs</DependentUpon>

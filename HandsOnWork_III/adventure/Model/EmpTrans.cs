@@ -12,8 +12,8 @@ namespace Model
         private string razaoSocial;
         private string nomeFantasia;
         private string cnpj;
-        private string tipoTransp;
-        private string responsavel;
+        private TipoTransporte tipoTransp;
+        private ResponsavelEmpresa responsavel;
 
     
     }
