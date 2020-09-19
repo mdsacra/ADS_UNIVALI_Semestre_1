@@ -13,7 +13,7 @@ namespace Controller
 
         IEmpTransView _empView;
         IList _empresas;
-        EmpTrans empresa;
+        EmpTrans EmpTrans;
 
         public EmpTransController(IEmpTransView empView, IList empresas)
         {

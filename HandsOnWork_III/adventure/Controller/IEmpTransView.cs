@@ -14,11 +14,5 @@ namespace Controller
         void RemoveEmpTrans(EmpTrans emp);
         void AtualiarEmpTrans(EmpTrans emp);
 
-        int id { get; set; }
-        string razaoSocial { get; set; }
-        string nomeFantasia { get; set; }
-        string cnpj { get; set; }
-        TipoTransporte tipoTransp { get; set; }
-        ResponsavelEmpresa responsavel { get; set; }
     }
 }

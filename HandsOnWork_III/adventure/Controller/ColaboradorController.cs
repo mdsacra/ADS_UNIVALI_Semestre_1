@@ -12,7 +12,7 @@ namespace Controller
     {
         IColabView _view;
         IList _colaboradores;
-        Colaborador colaborador;
+        Colaborador Colaborador;
 
         public ColaboradorController(IColabView view, IList colaboradores)
         {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,12 +9,13 @@ namespace Model
 {
     public class Colaborador
     {
-        private int id;
-        private string nome;
-        private string cpf;
-        private Departamento dpto;
-        private Double salario;
-        private DateTime dtAdmissao;
+        [Key]
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public Departamento Dpto { get; set; }
+        public Double Salario { get; set; }
+        public DateTime DtAdmissao { get; set; }
 
     }
 }

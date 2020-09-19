@@ -13,7 +13,7 @@ namespace Controller
 
         IClienteView _view;
         IList _clientes;
-        Cliente cliente;
+        Cliente Cliente;
 
         public ClienteController(IClienteView view, IList clientes)
         {

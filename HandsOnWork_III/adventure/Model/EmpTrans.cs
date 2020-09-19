@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,14 @@ namespace Model
 {
     public class EmpTrans
     {
-        private int id;
-        private string razaoSocial;
-        private string nomeFantasia;
-        private string cnpj;
-        private TipoTransporte tipoTransp;
-        private ResponsavelEmpresa responsavel;
+        [Key]
+        public int Id { get; set; }
+        public string RazaoSocial { get; set; }
+        public string NomeFantasia { get; set; }
+        public string Cnpj { get; set; }
+        public TipoTransporte TipoTransp { get; set; }
+        public ResponsavelEmpresa Responsavel { get; set; }
 
-    
+
     }
 }

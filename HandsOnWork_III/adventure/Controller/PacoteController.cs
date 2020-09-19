@@ -12,7 +12,7 @@ namespace Controller
     {
         IPacoteView _view;
         IList _pacotes;
-        Pacote pacote;
+        Pacote Pacote;
 
         public PacoteController(IPacoteView view, IList pacotes)
         {
