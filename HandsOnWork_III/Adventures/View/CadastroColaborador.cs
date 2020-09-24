@@ -1,0 +1,42 @@
+﻿using Adventures.Controller;
+using Adventures.Model;
+using Adventures.Model.DAL;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace Adventures.View
+{
+    public partial class CadastroColaborador : Form
+    {
+
+        private ColaboradorController controller = new ColaboradorController();
+        public CadastroColaborador()
+        {
+            InitializeComponent();
+        }
+
+
+        private void CadastroColaborador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Colaborador colaborador = new Colaborador()
+            {
+                Nome = colabNome.Text,
+                Fone = colabFone.Text,
+                Email = colabEmail.Text,
+                Salario = Convert.ToDouble(colabSalario.Text)
+            };
+
+            controller.AdicionarColaborador(colaborador);
+        }
+    }
+}
