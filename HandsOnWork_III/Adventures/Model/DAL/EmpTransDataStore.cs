@@ -29,5 +29,19 @@ namespace Adventures.Model.DAL
 
             context.SaveChanges();
         }
+
+        public void EditarEmpTrans(EmpTrans empresa)
+        {
+            EmpTrans editEmp = context.EmpTrans.Find(empresa.Id);
+
+            editEmp.Nome = empresa.Nome;
+            editEmp.Responsavel = empresa.Responsavel;
+            editEmp.Cnpj = empresa.Cnpj;
+            editEmp.Tipo = empresa.Tipo;
+
+            context.EmpTrans.Update(editEmp);
+            context.SaveChanges();
+
+        }
     }
 }

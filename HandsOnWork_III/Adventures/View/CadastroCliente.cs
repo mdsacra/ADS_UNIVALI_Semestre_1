@@ -17,7 +17,7 @@ namespace Adventures.View
             InitializeComponent();
         }
 
-        ClienteController clienteController = new ClienteController();
+        readonly ClienteController clienteController = new ClienteController();
 
         
         private void CadastroCliente_Load(object sender, EventArgs e)
@@ -42,6 +42,28 @@ namespace Adventures.View
             int id = dataGridView1.CurrentRow.Index + 1;
 
             clienteController.RemoverCliente(id);
+        }
+
+        private void editarCliente_Click(object sender, EventArgs e)
+        {
+
+            using (var editCli = new EditarCliente())
+            {
+
+                editCli.Id = (int)dataGridView1.CurrentRow.Cells[0].Value;
+                editCli.AltNome = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                editCli.AltCpf = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                editCli.AltEmail = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                editCli.AltDtCad = (DateTime)dataGridView1.CurrentRow.Cells[4].Value;
+                editCli.ShowDialog();
+            }
+            
+
+
+
+
+
+
         }
     }
 }

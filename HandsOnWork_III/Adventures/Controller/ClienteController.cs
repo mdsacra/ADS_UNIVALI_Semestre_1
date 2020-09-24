@@ -24,5 +24,10 @@ namespace Adventures.Controller
         {
             clienteDataStore.RemoverCliente(id);
         }
+
+        public void EditarCliente(Cliente cliente)
+        {
+            clienteDataStore.EditarCliente(cliente);
+        }
     }
 }

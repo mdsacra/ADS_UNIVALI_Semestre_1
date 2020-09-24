@@ -19,10 +19,10 @@ namespace Adventures
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new CadastroColaborador());
-            //Application.Run(new CadastroCliente());
+            Application.Run(new CadastroCliente());
             //Application.Run(new CadastroEmpTrans());
-            Application.Run(new CadastroPacote());
-
+            //Application.Run(new CadastroPacote());
+            //Application.Run(new ListaPacotes());
 
         }
     }

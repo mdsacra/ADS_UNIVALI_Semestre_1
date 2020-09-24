@@ -25,5 +25,10 @@ namespace Adventures.Controller
         {
             empTransDataStore.RemoverEmpTrans(id);
         }
+
+        public void EditarEmpTrans(EmpTrans empresa)
+        {
+            empTransDataStore.EditarEmpTrans(empresa);
+        }
     }
 }

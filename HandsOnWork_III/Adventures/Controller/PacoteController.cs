@@ -15,5 +15,10 @@ namespace Adventures.Controller
         {
             pacoteDataStore.AddPacote(pacote);
         }
+
+        internal List<Pacote> Listar()
+        {
+            return pacoteDataStore.ListarPacotes();
+        }
     }
 }

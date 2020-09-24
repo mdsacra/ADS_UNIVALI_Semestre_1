@@ -28,5 +28,22 @@ namespace Adventures.Model.DAL
             context.Colaboradores.Remove(colaborador);
             context.SaveChanges();
         }
+
+        public void EditarColab(Colaborador colab)
+        {
+            Colaborador editarColab = context.Colaboradores.Find(colab.Id);
+
+            editarColab.Nome = colab.Nome;
+            editarColab.Salario = colab.Salario;
+            editarColab.DataAdmissao = colab.DataAdmissao;
+            editarColab.Dpto = colab.Dpto;
+            editarColab.Email = colab.Email;
+            editarColab.Fone = colab.Fone;
+
+
+            context.Colaboradores.Update(editarColab);
+            context.SaveChanges();
+
+        }
     }
 }

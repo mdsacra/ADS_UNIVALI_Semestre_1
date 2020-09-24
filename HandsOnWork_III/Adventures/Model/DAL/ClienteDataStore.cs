@@ -28,6 +28,19 @@ namespace Adventures.Model.DAL
             context.SaveChanges();
         }
 
+        public void EditarCliente(Cliente cliente)
+        {
+            Cliente editCliente = context.Clientes.FirstOrDefault(c => c.Id == cliente.Id);
+
+            editCliente.Nome = cliente.Nome;
+            editCliente.Cpf = cliente.Cpf;
+            editCliente.DataCadastro = cliente.DataCadastro;
+            editCliente.Email = cliente.Email;
+
+            context.Clientes.Update(editCliente);
+            context.SaveChanges();
+        }
+
         
     }
 }

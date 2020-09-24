@@ -1,6 +1,7 @@
 ﻿using Adventures.Controller;
 using Adventures.Model;
 using Adventures.Model.Enum;
+using Adventures.Uteis;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,11 +20,11 @@ namespace Adventures.View
         }
 
         EmpTransController empTransController = new EmpTransController();
-        RespEmpController respEmpController = new RespEmpController();
         
         private void CadastroEmpTrans_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = empTransController.ListarEmpresas();
+            tipoEmpresa.DataSource = EnumToList<TipoTransporte>.Listar();
         }
 
         private void cadastrarEmpresa_Click(object sender, EventArgs e)
@@ -39,12 +40,11 @@ namespace Adventures.View
             {
                 Nome = nomeEmpresa.Text,
                 Cnpj = cnpjEmpresa.Text,
-                Responsavel = respEmpController.AdicionarResponsavel(responsavel),
-                Tipo = TipoTransporte.Onibus
+                Responsavel = responsavel,
+                Tipo = (TipoTransporte) tipoEmpresa.SelectedItem,
             };
-
-            empTransController.CadastrarEmpTrans(empresa);
             
+            empTransController.CadastrarEmpTrans(empresa);
 
         }
 

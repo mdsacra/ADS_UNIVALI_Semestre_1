@@ -25,5 +25,10 @@ namespace Adventures.Controller
         {
             colabDataStore.RemoverColab(id);
         }
+
+        public void EditarColaborador(Colaborador colaborador)
+        {
+            colabDataStore.EditarColab(colaborador);
+        }
     }
 }
