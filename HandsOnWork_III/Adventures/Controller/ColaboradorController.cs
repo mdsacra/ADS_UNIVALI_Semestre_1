@@ -9,11 +9,21 @@ namespace Adventures.Controller
     public class ColaboradorController
     {
 
+        ColabDataStore colabDataStore = new ColabDataStore();
+
         public void AdicionarColaborador(Colaborador colaborador)
         {
-            ColabDataStore colabDataStore = new ColabDataStore();
-
             colabDataStore.AddColab(colaborador);
+        }
+
+        public List<Colaborador> BuscarColaboradores()
+        {
+            return colabDataStore.BuscarColabs();
+        }
+
+        public void RemoverColaborador(int id)
+        {
+            colabDataStore.RemoverColab(id);
         }
     }
 }

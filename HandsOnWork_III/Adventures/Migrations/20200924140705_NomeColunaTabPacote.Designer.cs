@@ -4,14 +4,16 @@ using Adventures.Model.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Adventures.Migrations
 {
     [DbContext(typeof(AdventuresContext))]
-    partial class AdventuresContextModelSnapshot : ModelSnapshot
+    [Migration("20200924140705_NomeColunaTabPacote")]
+    partial class NomeColunaTabPacote
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

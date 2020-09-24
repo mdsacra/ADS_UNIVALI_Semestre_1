@@ -5727,11 +5727,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matheus\\source\\repos\\Adventures\\Adventures.csproj",
+      "projectUniqueName": "C:\\Users\\Matheus\\repositorios\\ADS_UNIVALI_Semestre_1\\HandsOnWork_III\\Adventures\\Adventures.csproj",
       "projectName": "Adventures",
-      "projectPath": "C:\\Users\\Matheus\\source\\repos\\Adventures\\Adventures.csproj",
+      "projectPath": "C:\\Users\\Matheus\\repositorios\\ADS_UNIVALI_Semestre_1\\HandsOnWork_III\\Adventures\\Adventures.csproj",
       "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matheus\\source\\repos\\Adventures\\obj\\",
+      "outputPath": "C:\\Users\\Matheus\\repositorios\\ADS_UNIVALI_Semestre_1\\HandsOnWork_III\\Adventures\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

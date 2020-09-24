@@ -20,12 +20,13 @@ namespace Adventures.View
 
         EmpTransController empTransController = new EmpTransController();
         RespEmpController respEmpController = new RespEmpController();
+        
         private void CadastroEmpTrans_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = empTransController.ListarEmpresas();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cadastrarEmpresa_Click(object sender, EventArgs e)
         {
 
             RespEmpresa responsavel = new RespEmpresa()
@@ -44,6 +45,14 @@ namespace Adventures.View
 
             empTransController.CadastrarEmpTrans(empresa);
             
+
+        }
+
+        private void removerEmpresa_Click(object sender, EventArgs e)
+        {
+            int id = dataGridView1.CurrentRow.Index + 1;
+
+            empTransController.RemoverEmpTrans(id);
 
         }
     }

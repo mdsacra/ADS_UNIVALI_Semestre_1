@@ -8,12 +8,22 @@ namespace Adventures.Controller
 {
     public class EmpTransController
     {
+
+        EmpTransDataStore empTransDataStore = new EmpTransDataStore();
+
+        public List<EmpTrans> ListarEmpresas()
+        {
+            return empTransDataStore.ListarEmpresas();
+        }
+
         public void CadastrarEmpTrans(EmpTrans empresa)
         {
-            EmpTransDataStore empTransDataStore = new EmpTransDataStore();
-
             empTransDataStore.AddEmpTrans(empresa);
         }
 
+        public void RemoverEmpTrans(int id)
+        {
+            empTransDataStore.RemoverEmpTrans(id);
+        }
     }
 }

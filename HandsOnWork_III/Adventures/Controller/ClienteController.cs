@@ -10,9 +10,19 @@ namespace Adventures.Controller
     {
         ClienteDataStore clienteDataStore = new ClienteDataStore();
 
+        public List<Cliente> ListarClientes()
+        {
+            return clienteDataStore.ListarClientes();
+        }
+
         public void CadastrarCliente(Cliente cliente)
         {
             clienteDataStore.AddCliente(cliente);
+        }
+
+        public void RemoverCliente(int id)
+        {
+            clienteDataStore.RemoverCliente(id);
         }
     }
 }

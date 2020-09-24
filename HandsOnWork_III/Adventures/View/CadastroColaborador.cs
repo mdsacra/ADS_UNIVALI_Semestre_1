@@ -23,10 +23,10 @@ namespace Adventures.View
 
         private void CadastroColaborador_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = controller.BuscarColaboradores();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cadastraColab_Click(object sender, EventArgs e)
         {
             Colaborador colaborador = new Colaborador()
             {
@@ -38,5 +38,14 @@ namespace Adventures.View
 
             controller.AdicionarColaborador(colaborador);
         }
+
+        private void removeColab_click(object sender, EventArgs e)
+        {
+            int id = dataGridView1.CurrentRow.Index + 1;
+
+            controller.RemoverColaborador(id);
+        }
+
+        
     }
 }

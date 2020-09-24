@@ -39,7 +39,6 @@
             this.cadastraColab = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.buscaColab = new System.Windows.Forms.Button();
             this.removeColab = new System.Windows.Forms.Button();
             this.editaColab = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -112,13 +111,13 @@
             // 
             // cadastraColab
             // 
-            this.cadastraColab.Location = new System.Drawing.Point(525, 33);
+            this.cadastraColab.Location = new System.Drawing.Point(606, 34);
             this.cadastraColab.Name = "cadastraColab";
             this.cadastraColab.Size = new System.Drawing.Size(75, 23);
             this.cadastraColab.TabIndex = 5;
             this.cadastraColab.Text = "Cadastrar";
             this.cadastraColab.UseVisualStyleBackColor = true;
-            this.cadastraColab.Click += new System.EventHandler(this.button1_Click);
+            this.cadastraColab.Click += new System.EventHandler(this.cadastraColab_Click);
             // 
             // comboBox1
             // 
@@ -137,41 +136,31 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Departamento";
             // 
-            // buscaColab
-            // 
-            this.buscaColab.Location = new System.Drawing.Point(525, 62);
-            this.buscaColab.Name = "buscaColab";
-            this.buscaColab.Size = new System.Drawing.Size(75, 23);
-            this.buscaColab.TabIndex = 5;
-            this.buscaColab.Text = "Buscar";
-            this.buscaColab.UseVisualStyleBackColor = true;
-            this.buscaColab.Click += new System.EventHandler(this.button1_Click);
-            // 
             // removeColab
             // 
-            this.removeColab.Location = new System.Drawing.Point(606, 62);
+            this.removeColab.Location = new System.Drawing.Point(606, 92);
             this.removeColab.Name = "removeColab";
             this.removeColab.Size = new System.Drawing.Size(75, 23);
             this.removeColab.TabIndex = 5;
             this.removeColab.Text = "Remover";
             this.removeColab.UseVisualStyleBackColor = true;
-            this.removeColab.Click += new System.EventHandler(this.button1_Click);
+            this.removeColab.Click += new System.EventHandler(this.removeColab_click);
             // 
             // editaColab
             // 
-            this.editaColab.Location = new System.Drawing.Point(606, 33);
+            this.editaColab.Location = new System.Drawing.Point(606, 63);
             this.editaColab.Name = "editaColab";
             this.editaColab.Size = new System.Drawing.Size(75, 23);
             this.editaColab.TabIndex = 5;
             this.editaColab.Text = "Editar";
             this.editaColab.UseVisualStyleBackColor = true;
-            this.editaColab.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 143);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(776, 295);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.Text = "dataGridView1";
@@ -184,7 +173,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.editaColab);
             this.Controls.Add(this.removeColab);
-            this.Controls.Add(this.buscaColab);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cadastraColab);
@@ -218,7 +206,6 @@
         private System.Windows.Forms.Button cadastraColab;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button buscaColab;
         private System.Windows.Forms.Button removeColab;
         private System.Windows.Forms.Button editaColab;
         private System.Windows.Forms.DataGridView dataGridView1;

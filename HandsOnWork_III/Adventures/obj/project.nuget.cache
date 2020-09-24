@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jGXX5nyMwL71vbnFPZ6C5HAKcYnmbGuKewDYBBvLjeC2zJrRsI6AA8ZZUT9ecgaPfBzjTtZ1/Y8FYJp6qioRQw==",
+  "dgSpecHash": "2rVRfAZ7DelCAixmFNqyBj81WpqMAqPYHc149iTPecOreasTJtTB62+HmLiTF3bOsrbzN10YN/DPOwzMPGdPjA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matheus\\source\\repos\\Adventures\\Adventures.csproj",
+  "projectFilePath": "C:\\Users\\Matheus\\repositorios\\ADS_UNIVALI_Semestre_1\\HandsOnWork_III\\Adventures\\Adventures.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matheus\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Matheus\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

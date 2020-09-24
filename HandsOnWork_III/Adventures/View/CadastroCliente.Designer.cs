@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.removerCliente = new System.Windows.Forms.Button();
+            this.editarCliente = new System.Windows.Forms.Button();
+            this.cadastrarCliente = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,45 +50,34 @@
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.Text = "dataGridView1";
             // 
-            // button1
+            // removerCliente
             // 
-            this.button1.Location = new System.Drawing.Point(654, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.removerCliente.Location = new System.Drawing.Point(654, 82);
+            this.removerCliente.Name = "removerCliente";
+            this.removerCliente.Size = new System.Drawing.Size(75, 23);
+            this.removerCliente.TabIndex = 5;
+            this.removerCliente.Text = "Remover";
+            this.removerCliente.UseVisualStyleBackColor = true;
+            this.removerCliente.Click += new System.EventHandler(this.removerCliente_Click);
             // 
-            // button2
+            // editarCliente
             // 
-            this.button2.Location = new System.Drawing.Point(654, 65);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Remover";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.editarCliente.Location = new System.Drawing.Point(654, 53);
+            this.editarCliente.Name = "editarCliente";
+            this.editarCliente.Size = new System.Drawing.Size(75, 23);
+            this.editarCliente.TabIndex = 5;
+            this.editarCliente.Text = "Editar";
+            this.editarCliente.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // cadastrarCliente
             // 
-            this.button3.Location = new System.Drawing.Point(573, 65);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(573, 36);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Cadastrar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button1_Click);
+            this.cadastrarCliente.Location = new System.Drawing.Point(654, 24);
+            this.cadastrarCliente.Name = "cadastrarCliente";
+            this.cadastrarCliente.Size = new System.Drawing.Size(75, 23);
+            this.cadastrarCliente.TabIndex = 5;
+            this.cadastrarCliente.Text = "Cadastrar";
+            this.cadastrarCliente.UseVisualStyleBackColor = true;
+            this.cadastrarCliente.Click += new System.EventHandler(this.cadastrarCliente_Click);
             // 
             // label3
             // 
@@ -131,7 +119,6 @@
             this.cpfCliente.Name = "cpfCliente";
             this.cpfCliente.Size = new System.Drawing.Size(204, 23);
             this.cpfCliente.TabIndex = 0;
-            this.cpfCliente.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // nomeCliente
             // 
@@ -151,13 +138,13 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cadastrarCliente);
+            this.Controls.Add(this.editarCliente);
+            this.Controls.Add(this.removerCliente);
             this.Controls.Add(this.dataGridView1);
             this.Name = "CadastroCliente";
             this.Text = "CadastroCliente";
+            this.Load += new System.EventHandler(this.CadastroCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,9 +155,9 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button removerCliente;
+        private System.Windows.Forms.Button editarCliente;
+        private System.Windows.Forms.Button cadastrarCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

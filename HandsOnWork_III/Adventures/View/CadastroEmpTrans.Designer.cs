@@ -31,7 +31,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.editarEmpresa = new System.Windows.Forms.Button();
             this.removerEmpresa = new System.Windows.Forms.Button();
-            this.buscarEmpresa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cadastrarEmpresa = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,39 +50,30 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 133);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(776, 295);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.Text = "dataGridView1";
             // 
             // editarEmpresa
             // 
-            this.editarEmpresa.Location = new System.Drawing.Point(657, 23);
+            this.editarEmpresa.Location = new System.Drawing.Point(662, 53);
             this.editarEmpresa.Name = "editarEmpresa";
             this.editarEmpresa.Size = new System.Drawing.Size(75, 23);
             this.editarEmpresa.TabIndex = 5;
             this.editarEmpresa.Text = "Editar";
             this.editarEmpresa.UseVisualStyleBackColor = true;
-            this.editarEmpresa.Click += new System.EventHandler(this.button1_Click);
+            
             // 
             // removerEmpresa
             // 
-            this.removerEmpresa.Location = new System.Drawing.Point(657, 52);
+            this.removerEmpresa.Location = new System.Drawing.Point(662, 82);
             this.removerEmpresa.Name = "removerEmpresa";
             this.removerEmpresa.Size = new System.Drawing.Size(75, 23);
             this.removerEmpresa.TabIndex = 5;
             this.removerEmpresa.Text = "Remover";
             this.removerEmpresa.UseVisualStyleBackColor = true;
-            this.removerEmpresa.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // buscarEmpresa
-            // 
-            this.buscarEmpresa.Location = new System.Drawing.Point(576, 52);
-            this.buscarEmpresa.Name = "buscarEmpresa";
-            this.buscarEmpresa.Size = new System.Drawing.Size(75, 23);
-            this.buscarEmpresa.TabIndex = 5;
-            this.buscarEmpresa.Text = "Buscar";
-            this.buscarEmpresa.UseVisualStyleBackColor = true;
-            this.buscarEmpresa.Click += new System.EventHandler(this.button1_Click);
+            this.removerEmpresa.Click += new System.EventHandler(this.removerEmpresa_Click);
             // 
             // label1
             // 
@@ -96,13 +86,13 @@
             // 
             // cadastrarEmpresa
             // 
-            this.cadastrarEmpresa.Location = new System.Drawing.Point(576, 23);
+            this.cadastrarEmpresa.Location = new System.Drawing.Point(662, 24);
             this.cadastrarEmpresa.Name = "cadastrarEmpresa";
             this.cadastrarEmpresa.Size = new System.Drawing.Size(75, 23);
             this.cadastrarEmpresa.TabIndex = 5;
             this.cadastrarEmpresa.Text = "Cadastrar";
             this.cadastrarEmpresa.UseVisualStyleBackColor = true;
-            this.cadastrarEmpresa.Click += new System.EventHandler(this.button1_Click);
+            this.cadastrarEmpresa.Click += new System.EventHandler(this.cadastrarEmpresa_Click);
             // 
             // label3
             // 
@@ -192,7 +182,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cadastrarEmpresa);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buscarEmpresa);
             this.Controls.Add(this.removerEmpresa);
             this.Controls.Add(this.editarEmpresa);
             this.Controls.Add(this.dataGridView1);
@@ -210,7 +199,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button editarEmpresa;
         private System.Windows.Forms.Button removerEmpresa;
-        private System.Windows.Forms.Button buscarEmpresa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cadastrarEmpresa;
         private System.Windows.Forms.Label label3;
