@@ -16,6 +16,9 @@
     <Compile Update="View\EditarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\EditarColab.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\ListaPacotes.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -24,7 +24,7 @@ namespace Adventures.Model.DAL
 
         public void RemoverColab(int id)
         {
-            Colaborador colaborador = context.Colaboradores.FirstOrDefault(c => c.Id == id);
+            Colaborador colaborador = context.Colaboradores.Find(id);
             context.Colaboradores.Remove(colaborador);
             context.SaveChanges();
         }

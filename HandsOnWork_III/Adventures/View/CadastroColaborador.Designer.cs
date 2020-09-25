@@ -122,7 +122,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(300, 92);
+            this.comboBox1.Location = new System.Drawing.Point(334, 92);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 6;
@@ -130,7 +130,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(211, 95);
+            this.label5.Location = new System.Drawing.Point(245, 95);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 15);
             this.label5.TabIndex = 7;
@@ -154,6 +154,7 @@
             this.editaColab.TabIndex = 5;
             this.editaColab.Text = "Editar";
             this.editaColab.UseVisualStyleBackColor = true;
+            this.editaColab.Click += new System.EventHandler(this.editaColab_Click);
             // 
             // dataGridView1
             // 
@@ -186,7 +187,6 @@
             this.Controls.Add(this.colabNome);
             this.Name = "CadastroColaborador";
             this.Text = "CadastroColaborador";
-            this.Load += new System.EventHandler(this.CadastroColaborador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

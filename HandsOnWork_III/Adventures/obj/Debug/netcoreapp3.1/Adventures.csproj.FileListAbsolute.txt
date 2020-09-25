@@ -110,3 +110,4 @@ C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\HandsOnWork_III\Adventures\
 C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\HandsOnWork_III\Adventures\obj\Debug\netcoreapp3.1\Adventures.genruntimeconfig.cache
 C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\HandsOnWork_III\Adventures\obj\Debug\netcoreapp3.1\Adventures.View.ListaPacotes.resources
 C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\HandsOnWork_III\Adventures\obj\Debug\netcoreapp3.1\Adventures.View.EditarCliente.resources
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\HandsOnWork_III\Adventures\obj\Debug\netcoreapp3.1\Adventures.View.EditarColab.resources

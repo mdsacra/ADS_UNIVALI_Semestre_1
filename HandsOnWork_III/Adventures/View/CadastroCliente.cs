@@ -22,7 +22,7 @@ namespace Adventures.View
         
         private void CadastroCliente_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = clienteController.ListarClientes();
+            ReciclarTela();
         }
 
         private void cadastrarCliente_Click(object sender, EventArgs e)
@@ -35,13 +35,15 @@ namespace Adventures.View
             };
 
             clienteController.CadastrarCliente(cliente);
+            ReciclarTela();
         }
 
         private void removerCliente_Click(object sender, EventArgs e)
         {
-            int id = dataGridView1.CurrentRow.Index + 1;
+            int id = (int)dataGridView1.CurrentRow.Cells[0].Value;
 
             clienteController.RemoverCliente(id);
+            ReciclarTela();
         }
 
         private void editarCliente_Click(object sender, EventArgs e)
@@ -57,12 +59,18 @@ namespace Adventures.View
                 editCli.AltDtCad = (DateTime)dataGridView1.CurrentRow.Cells[4].Value;
                 editCli.ShowDialog();
             }
+
+            Close();
             
+        }
 
+        private void ReciclarTela()
+        {
 
-
-
-
+            dataGridView1.DataSource = clienteController.ListarClientes();
+            nomeCliente.Text = "";
+            cpfCliente.Text = "";
+            emailCliente.Text = "";
 
         }
     }

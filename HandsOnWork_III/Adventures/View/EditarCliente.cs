@@ -55,6 +55,9 @@ namespace Adventures.View
             clienteController.EditarCliente(cliente);
 
             Close();
+
+            CadastroCliente cadastroCliente = new CadastroCliente();
+            cadastroCliente.ShowDialog();
         }
     }
 }

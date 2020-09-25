@@ -20,14 +20,10 @@ namespace Adventures.View
         public CadastroColaborador()
         {
             InitializeComponent();
-        }
-
-
-        private void CadastroColaborador_Load(object sender, EventArgs e)
-        {
             dataGridView1.DataSource = controller.BuscarColaboradores();
             comboBox1.DataSource = EnumToList<Departamento>.Listar();
         }
+
 
         private void cadastraColab_Click(object sender, EventArgs e)
         {
@@ -41,15 +37,38 @@ namespace Adventures.View
             };
 
             controller.AdicionarColaborador(colaborador);
+            ReciclarTela();
         }
 
         private void removeColab_click(object sender, EventArgs e)
         {
-            int id = dataGridView1.CurrentRow.Index + 1;
+            int id = (int)dataGridView1.CurrentRow.Cells[0].Value;
 
             controller.RemoverColaborador(id);
+            ReciclarTela();
         }
 
-        
+        private void editaColab_Click(object sender, EventArgs e)
+        {
+            Colaborador colab = dataGridView1.CurrentRow.DataBoundItem as Colaborador;
+
+            using (var editarColab = new EditarColab(colab))
+            {
+                editarColab.ShowDialog();
+            }
+
+            Close();
+        }
+
+        private void ReciclarTela()
+        {
+
+            dataGridView1.DataSource = controller.BuscarColaboradores();
+            colabNome.Text = "";
+            colabEmail.Text = "";
+            colabFone.Text = "";
+            colabSalario.Text = "";
+
+        }
     }
 }
