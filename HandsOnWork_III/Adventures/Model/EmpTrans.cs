@@ -13,5 +13,6 @@ namespace Adventures.Model
         public TipoTransporte Tipo { get; set; }
         public RespEmpresa Responsavel { get; set; }
 
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,9 +17,18 @@ namespace Adventures.Model.DAL
             context.SaveChanges();
         }
 
-        internal List<Pacote> ListarPacotes()
+        public List<Pacote> ListarPacotes()
         {
-            return context.Pacotes.ToList();
+            return context.Pacotes.Include(p => p.Empresa).ToList();
         }
+
+        public List<Cliente> ListarClientes(int id)
+        {
+            return context.Pacotes
+                .FirstOrDefault(p => p.Id == id)
+                .Clientes.Select(c => c.Cliente)
+                .ToList();
+        }
+
     }
 }

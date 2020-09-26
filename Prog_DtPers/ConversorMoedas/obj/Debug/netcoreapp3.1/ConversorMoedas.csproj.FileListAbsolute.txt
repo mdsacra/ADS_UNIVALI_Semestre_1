@@ -1,0 +1,15 @@
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\bin\Debug\netcoreapp3.1\ConversorMoedas.exe
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\bin\Debug\netcoreapp3.1\ConversorMoedas.deps.json
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\bin\Debug\netcoreapp3.1\ConversorMoedas.runtimeconfig.json
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\bin\Debug\netcoreapp3.1\ConversorMoedas.runtimeconfig.dev.json
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\bin\Debug\netcoreapp3.1\ConversorMoedas.dll
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\bin\Debug\netcoreapp3.1\ConversorMoedas.pdb
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\obj\Debug\netcoreapp3.1\ConversorMoedas.csprojAssemblyReference.cache
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\obj\Debug\netcoreapp3.1\ConversorMoedas.Form1.resources
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\obj\Debug\netcoreapp3.1\ConversorMoedas.csproj.GenerateResource.cache
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\obj\Debug\netcoreapp3.1\ConversorMoedas.AssemblyInfoInputs.cache
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\obj\Debug\netcoreapp3.1\ConversorMoedas.AssemblyInfo.cs
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\obj\Debug\netcoreapp3.1\ConversorMoedas.csproj.CoreCompileInputs.cache
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\obj\Debug\netcoreapp3.1\ConversorMoedas.dll
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\obj\Debug\netcoreapp3.1\ConversorMoedas.pdb
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\Prog_DtPers\ConversorMoedas\obj\Debug\netcoreapp3.1\ConversorMoedas.genruntimeconfig.cache

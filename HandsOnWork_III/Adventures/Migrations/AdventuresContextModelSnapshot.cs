@@ -140,6 +140,21 @@ namespace Adventures.Migrations
                     b.ToTable("Pacotes");
                 });
 
+            modelBuilder.Entity("Adventures.Model.PacoteCliente", b =>
+                {
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PacoteId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ClienteId", "PacoteId");
+
+                    b.HasIndex("PacoteId");
+
+                    b.ToTable("PacoteClientes");
+                });
+
             modelBuilder.Entity("Adventures.Model.RespEmpresa", b =>
                 {
                     b.Property<int>("Id")
@@ -170,6 +185,21 @@ namespace Adventures.Migrations
                     b.HasOne("Adventures.Model.EmpTrans", "Empresa")
                         .WithMany()
                         .HasForeignKey("EmpresaId");
+                });
+
+            modelBuilder.Entity("Adventures.Model.PacoteCliente", b =>
+                {
+                    b.HasOne("Adventures.Model.Cliente", "Cliente")
+                        .WithMany("Pacotes")
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Adventures.Model.Pacote", "Pacote")
+                        .WithMany("Clientes")
+                        .HasForeignKey("PacoteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

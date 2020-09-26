@@ -20,5 +20,10 @@ namespace Adventures.Controller
         {
             return pacoteDataStore.ListarPacotes();
         }
+
+        public List<Cliente> ListarClientes(int id)
+        {
+            return pacoteDataStore.ListarClientes(id);
+        }
     }
 }

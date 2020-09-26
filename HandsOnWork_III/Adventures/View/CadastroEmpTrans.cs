@@ -24,9 +24,11 @@ namespace Adventures.View
         private void CadastroEmpTrans_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = empTransController.ListarEmpresas();
+            
             tipoEmpresa.DataSource = EnumToList<TipoTransporte>.Listar();
         }
 
+        
         private void cadastrarEmpresa_Click(object sender, EventArgs e)
         {
 
@@ -50,10 +52,23 @@ namespace Adventures.View
 
         private void removerEmpresa_Click(object sender, EventArgs e)
         {
-            int id = dataGridView1.CurrentRow.Index + 1;
+            int id = (int)dataGridView1.CurrentRow.Cells[0].Value;
 
             empTransController.RemoverEmpTrans(id);
 
         }
+
+        private void editarEmpresa_Click(object sender, EventArgs e)
+        {
+            EmpTrans empresa = dataGridView1.CurrentRow.DataBoundItem as EmpTrans;
+
+            using(var editEmp = new EditarEmpTrans(empresa))
+            {
+                editEmp.ShowDialog();
+            }
+
+            Close();
+
+         }
     }
 }

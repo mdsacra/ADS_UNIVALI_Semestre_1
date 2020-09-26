@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace Adventures.Model.DAL
 
         public List<EmpTrans> ListarEmpresas()
         {
-            return context.EmpTrans.ToList();
+            return context.EmpTrans.Include(e => e.Responsavel).ToList();
         }
 
         public void AddEmpTrans(EmpTrans empresa)

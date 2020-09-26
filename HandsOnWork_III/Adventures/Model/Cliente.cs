@@ -11,6 +11,7 @@ namespace Adventures.Model
         public string Cpf { get; set; }
         public string Email { get; set; }
         public DateTime DataCadastro { get; set; } = DateTime.Now;
+        public List<PacoteCliente> Pacotes { get; set; }
 
     }
 }

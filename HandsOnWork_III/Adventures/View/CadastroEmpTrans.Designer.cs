@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.editarEmpresa = new System.Windows.Forms.Button();
             this.removerEmpresa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,18 +41,9 @@
             this.respEmpresa = new System.Windows.Forms.TextBox();
             this.cpfRespEmp = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 133);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 295);
-            this.dataGridView1.TabIndex = 8;
-            this.dataGridView1.Text = "dataGridView1";
             // 
             // editarEmpresa
             // 
@@ -63,7 +53,7 @@
             this.editarEmpresa.TabIndex = 5;
             this.editarEmpresa.Text = "Editar";
             this.editarEmpresa.UseVisualStyleBackColor = true;
-            
+            this.editarEmpresa.Click += new System.EventHandler(this.editarEmpresa_Click);
             // 
             // removerEmpresa
             // 
@@ -171,6 +161,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 450);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 133);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(776, 295);
+            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.Text = "dataGridView1";
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cpfRespEmp);
             this.Controls.Add(this.respEmpresa);

@@ -16,6 +16,6 @@ namespace Adventures.Model
         public Double VlrEstadia { get; set; }
         public Double VlrTransporte { get; set; }
         public bool AllInclusive { get; set; } = false;
-
+        public List<PacoteCliente> Clientes { get; set; }
     }
 }

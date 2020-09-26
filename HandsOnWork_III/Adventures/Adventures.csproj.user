@@ -19,7 +19,13 @@
     <Compile Update="View\EditarColab.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\ListaPacotes.cs">
+    <Compile Update="View\EditarEmpTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Inicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\InserirCliente.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

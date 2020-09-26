@@ -13,10 +13,13 @@ namespace Adventures.Model.DAL
         public DbSet<RespEmpresa> RespsEmpresas { get; set; }
         public DbSet<Pacote> Pacotes { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<PacoteCliente> PacoteClientes { get; set; }
 
-        
 
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<PacoteCliente>().HasKey(pc => new { pc.ClienteId, pc.PacoteId });
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
