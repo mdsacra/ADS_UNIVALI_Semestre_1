@@ -13,6 +13,7 @@ namespace Adventures.Model
         public DateTime DtPartida { get; set; }
         public DateTime DtRetorno { get; set; }
         public EmpTrans Empresa { get; set; }
+        public int EmpresaId { get; set; }
         public Double VlrEstadia { get; set; }
         public Double VlrTransporte { get; set; }
         public bool AllInclusive { get; set; } = false;

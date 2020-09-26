@@ -4,14 +4,16 @@ using Adventures.Model.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Adventures.Migrations
 {
     [DbContext(typeof(AdventuresContext))]
-    partial class AdventuresContextModelSnapshot : ModelSnapshot
+    [Migration("20200926194142_EmpTransPacoteResp")]
+    partial class EmpTransPacoteResp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -86,7 +88,7 @@ namespace Adventures.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ResponsavelId")
+                    b.Property<int?>("ResponsavelId")
                         .HasColumnType("int");
 
                     b.Property<int>("Tipo")
@@ -118,7 +120,7 @@ namespace Adventures.Migrations
                     b.Property<DateTime>("DtRetorno")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("EmpresaId")
+                    b.Property<int?>("EmpresaId")
                         .HasColumnType("int");
 
                     b.Property<string>("Hotel")
@@ -177,18 +179,14 @@ namespace Adventures.Migrations
                 {
                     b.HasOne("Adventures.Model.RespEmpresa", "Responsavel")
                         .WithMany()
-                        .HasForeignKey("ResponsavelId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ResponsavelId");
                 });
 
             modelBuilder.Entity("Adventures.Model.Pacote", b =>
                 {
                     b.HasOne("Adventures.Model.EmpTrans", "Empresa")
                         .WithMany("Pacotes")
-                        .HasForeignKey("EmpresaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("EmpresaId");
                 });
 
             modelBuilder.Entity("Adventures.Model.PacoteCliente", b =>

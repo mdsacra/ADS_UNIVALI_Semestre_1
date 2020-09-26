@@ -12,7 +12,14 @@ namespace Adventures.Model
         public string Cnpj { get; set; }
         public TipoTransporte Tipo { get; set; }
         public RespEmpresa Responsavel { get; set; }
+        public int ResponsavelId { get; set; }
+        public List<Pacote> Pacotes { get; set; }
 
+
+        public override string ToString()
+        {
+            return this.Nome + " | " + this.Tipo;
+        }
 
     }
 }

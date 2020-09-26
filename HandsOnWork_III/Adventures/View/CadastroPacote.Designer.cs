@@ -42,12 +42,11 @@
             this.dataPartida = new System.Windows.Forms.DateTimePicker();
             this.dataRetorno = new System.Windows.Forms.DateTimePicker();
             this.vlrTransPacote = new System.Windows.Forms.TextBox();
-            this.simPacote = new System.Windows.Forms.RadioButton();
-            this.naoPacote = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.allInclusive = new System.Windows.Forms.CheckBox();
+            this.cadEmpTrans = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +57,6 @@
             this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "Empresa";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // empPacote
             // 
@@ -70,13 +68,13 @@
             // 
             // cadastrarPacote
             // 
-            this.cadastrarPacote.Location = new System.Drawing.Point(364, 248);
+            this.cadastrarPacote.Location = new System.Drawing.Point(379, 248);
             this.cadastrarPacote.Name = "cadastrarPacote";
             this.cadastrarPacote.Size = new System.Drawing.Size(75, 23);
             this.cadastrarPacote.TabIndex = 5;
             this.cadastrarPacote.Text = "Cadastrar";
             this.cadastrarPacote.UseVisualStyleBackColor = true;
-            this.cadastrarPacote.Click += new System.EventHandler(this.button1_Click);
+            this.cadastrarPacote.Click += new System.EventHandler(this.cadastrarPacote_Click_1);
             // 
             // label2
             // 
@@ -95,7 +93,6 @@
             this.label3.Size = new System.Drawing.Size(36, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "Hotel";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -133,14 +130,14 @@
             // 
             this.paisPacote.Location = new System.Drawing.Point(334, 37);
             this.paisPacote.Name = "paisPacote";
-            this.paisPacote.Size = new System.Drawing.Size(105, 23);
+            this.paisPacote.Size = new System.Drawing.Size(120, 23);
             this.paisPacote.TabIndex = 0;
             // 
             // cidadePacote
             // 
             this.cidadePacote.Location = new System.Drawing.Point(105, 37);
             this.cidadePacote.Name = "cidadePacote";
-            this.cidadePacote.Size = new System.Drawing.Size(116, 23);
+            this.cidadePacote.Size = new System.Drawing.Size(139, 23);
             this.cidadePacote.TabIndex = 0;
             // 
             // dataPartida
@@ -159,39 +156,15 @@
             // 
             // vlrTransPacote
             // 
-            this.vlrTransPacote.Location = new System.Drawing.Point(339, 95);
+            this.vlrTransPacote.Location = new System.Drawing.Point(354, 95);
             this.vlrTransPacote.Name = "vlrTransPacote";
             this.vlrTransPacote.Size = new System.Drawing.Size(100, 23);
             this.vlrTransPacote.TabIndex = 10;
-            this.vlrTransPacote.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // simPacote
-            // 
-            this.simPacote.AutoSize = true;
-            this.simPacote.Location = new System.Drawing.Point(105, 211);
-            this.simPacote.Name = "simPacote";
-            this.simPacote.Size = new System.Drawing.Size(45, 19);
-            this.simPacote.TabIndex = 11;
-            this.simPacote.TabStop = true;
-            this.simPacote.Text = "Sim";
-            this.simPacote.UseVisualStyleBackColor = true;
-            this.simPacote.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // naoPacote
-            // 
-            this.naoPacote.AutoSize = true;
-            this.naoPacote.Location = new System.Drawing.Point(156, 211);
-            this.naoPacote.Name = "naoPacote";
-            this.naoPacote.Size = new System.Drawing.Size(47, 19);
-            this.naoPacote.TabIndex = 12;
-            this.naoPacote.TabStop = true;
-            this.naoPacote.Text = "Não";
-            this.naoPacote.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(242, 98);
+            this.label6.Location = new System.Drawing.Point(257, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 15);
             this.label6.TabIndex = 13;
@@ -215,26 +188,36 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "Data Retorno";
             // 
-            // label9
+            // allInclusive
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(29, 213);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 15);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "All Inclusive";
+            this.allInclusive.AutoSize = true;
+            this.allInclusive.Location = new System.Drawing.Point(105, 212);
+            this.allInclusive.Name = "allInclusive";
+            this.allInclusive.Size = new System.Drawing.Size(89, 19);
+            this.allInclusive.TabIndex = 14;
+            this.allInclusive.Text = "All Inclusive";
+            this.allInclusive.UseVisualStyleBackColor = true;
+            // 
+            // cadEmpTrans
+            // 
+            this.cadEmpTrans.Location = new System.Drawing.Point(361, 124);
+            this.cadEmpTrans.Name = "cadEmpTrans";
+            this.cadEmpTrans.Size = new System.Drawing.Size(93, 23);
+            this.cadEmpTrans.TabIndex = 15;
+            this.cadEmpTrans.Text = "Nova Empresa";
+            this.cadEmpTrans.UseVisualStyleBackColor = true;
+            this.cadEmpTrans.Click += new System.EventHandler(this.cadEmpTrans_Click);
             // 
             // CadastroPacote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 310);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.cadEmpTrans);
+            this.Controls.Add(this.allInclusive);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.naoPacote);
-            this.Controls.Add(this.simPacote);
             this.Controls.Add(this.vlrTransPacote);
             this.Controls.Add(this.dataRetorno);
             this.Controls.Add(this.dataPartida);
@@ -271,11 +254,10 @@
         private System.Windows.Forms.DateTimePicker dataPartida;
         private System.Windows.Forms.DateTimePicker dataRetorno;
         private System.Windows.Forms.TextBox vlrTransPacote;
-        private System.Windows.Forms.RadioButton simPacote;
-        private System.Windows.Forms.RadioButton naoPacote;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox allInclusive;
+        private System.Windows.Forms.Button cadEmpTrans;
     }
 }

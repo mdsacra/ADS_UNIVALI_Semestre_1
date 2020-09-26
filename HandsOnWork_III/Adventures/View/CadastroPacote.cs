@@ -5,7 +5,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Adventures.View
@@ -15,32 +18,20 @@ namespace Adventures.View
         public CadastroPacote()
         {
             InitializeComponent();
+            empPacote.DataSource = empTransController.ListarEmpresas();
+
         }
 
+        EmpTransController empTransController = new EmpTransController();
         PacoteController pacoteController = new PacoteController();
 
-        private void label3_Click(object sender, EventArgs e)
+
+        private void cadastrarPacote_Click_1(object sender, EventArgs e)
         {
 
-        }
+            EmpTrans emp = (EmpTrans)empPacote.SelectedItem;
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
+            int empId = emp.Id;
 
             Pacote pacote = new Pacote()
             {
@@ -51,11 +42,30 @@ namespace Adventures.View
                 VlrTransporte = Convert.ToDouble(vlrTransPacote.Text),
                 DtPartida = dataPartida.Value,
                 DtRetorno = dataRetorno.Value,
-                Empresa = null,
-                AllInclusive = false
+                EmpresaId = empId,
+                AllInclusive = allInclusive.Checked ? true : false
             };
 
             pacoteController.CadastrarPacote(pacote);
+
+            Close();
         }
+
+        private void cadEmpTrans_Click(object sender, EventArgs e)
+        {
+
+            using (var empTrans = new CadastroEmpTrans()){
+                empTrans.ShowDialog();
+            }
+
+
+            while(Application.OpenForms.OfType<CadastroEmpTrans>().Count() > 0)
+            {
+                continue;
+            }
+
+            empPacote.DataSource = empTransController.ListarEmpresas();
+        }
+
     }
 }

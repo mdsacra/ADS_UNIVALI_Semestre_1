@@ -61,6 +61,7 @@
             this.vender = new System.Windows.Forms.Button();
             this.cadPacote = new System.Windows.Forms.Button();
             this.cadColab = new System.Windows.Forms.Button();
+            this.removerPacote = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -291,11 +292,22 @@
             this.cadColab.UseVisualStyleBackColor = true;
             this.cadColab.Click += new System.EventHandler(this.cadColab_Click);
             // 
+            // removerPacote
+            // 
+            this.removerPacote.Location = new System.Drawing.Point(815, 343);
+            this.removerPacote.Name = "removerPacote";
+            this.removerPacote.Size = new System.Drawing.Size(107, 23);
+            this.removerPacote.TabIndex = 5;
+            this.removerPacote.Text = "Remover Pacote";
+            this.removerPacote.UseVisualStyleBackColor = true;
+            this.removerPacote.Click += new System.EventHandler(this.removerPacote_Click);
+            // 
             // Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 502);
+            this.Controls.Add(this.removerPacote);
             this.Controls.Add(this.cadColab);
             this.Controls.Add(this.cadPacote);
             this.Controls.Add(this.vender);
@@ -342,5 +354,6 @@
         private System.Windows.Forms.Button vender;
         private System.Windows.Forms.Button cadPacote;
         private System.Windows.Forms.Button cadColab;
+        private System.Windows.Forms.Button removerPacote;
     }
 }

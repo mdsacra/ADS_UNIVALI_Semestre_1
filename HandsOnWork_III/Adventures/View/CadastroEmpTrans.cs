@@ -17,15 +17,15 @@ namespace Adventures.View
         public CadastroEmpTrans()
         {
             InitializeComponent();
+            tipoEmpresa.DataSource = EnumToList<TipoTransporte>.Listar();
         }
 
         EmpTransController empTransController = new EmpTransController();
         
         private void CadastroEmpTrans_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = empTransController.ListarEmpresas();
+            ReciclarTela();
             
-            tipoEmpresa.DataSource = EnumToList<TipoTransporte>.Listar();
         }
 
         
@@ -48,6 +48,7 @@ namespace Adventures.View
             
             empTransController.CadastrarEmpTrans(empresa);
 
+            ReciclarTela();
         }
 
         private void removerEmpresa_Click(object sender, EventArgs e)
@@ -56,6 +57,7 @@ namespace Adventures.View
 
             empTransController.RemoverEmpTrans(id);
 
+            ReciclarTela();
         }
 
         private void editarEmpresa_Click(object sender, EventArgs e)
@@ -69,6 +71,15 @@ namespace Adventures.View
 
             Close();
 
-         }
+        }
+
+        private void ReciclarTela()
+        {
+            dataGridView1.DataSource = empTransController.ListarEmpresas();
+            nomeEmpresa.Text = "";
+            cnpjEmpresa.Text = "";
+            respEmpresa.Text = "";
+            cpfRespEmp.Text = "";
+        }
     }
 }

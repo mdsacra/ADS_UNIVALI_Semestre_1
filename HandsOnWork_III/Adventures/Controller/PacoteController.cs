@@ -25,5 +25,10 @@ namespace Adventures.Controller
         {
             return pacoteDataStore.ListarClientes(id);
         }
+
+        public void RemoverPacote(int id)
+        {
+            pacoteDataStore.RemoverPacote(id);
+        }
     }
 }
