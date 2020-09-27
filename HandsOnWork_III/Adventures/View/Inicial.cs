@@ -21,6 +21,7 @@ namespace Adventures.View
         }
 
         readonly PacoteController _controller = new PacoteController();
+        readonly PacoteClienteController _pacliController = new PacoteClienteController();
 
         private void cadPacote_Click(object sender, EventArgs e)
         {
@@ -42,8 +43,10 @@ namespace Adventures.View
         {
             Pacote selecPacote = dataGridView1.CurrentRow.DataBoundItem as Pacote;
 
-            using var insCli = new InserirCliente(selecPacote);
+            InserirCliente insCli = new InserirCliente(selecPacote);
+            
             insCli.ShowDialog();
+            
         }
 
         private void AtualizarTela<T>()
@@ -59,7 +62,7 @@ namespace Adventures.View
         {
             int idPacote = (int)dataGridView1.CurrentRow.Cells[0].Value;
 
-            List<Cliente> clientesPacote = _controller.ListarClientes(idPacote);
+            List<Cliente> clientesPacote = _pacliController.ListarClientesPacote(idPacote);
 
             if (clientesPacote.Count > 0)
             {
@@ -71,6 +74,16 @@ namespace Adventures.View
             }
 
 
+        }
+
+        private void listarClientes_Click(object sender, EventArgs e)
+        {
+            int pacoteId = (int)dataGridView1.CurrentRow.Cells[0].Value;
+
+            ClientesPacote clipac = new ClientesPacote(pacoteId);
+            clipac.ShowDialog();
+
+            
         }
     }
 }

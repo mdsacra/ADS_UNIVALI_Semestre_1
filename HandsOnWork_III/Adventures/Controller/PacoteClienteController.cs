@@ -15,6 +15,16 @@ namespace Adventures.Controller
         {
             paclids.AddClientePacote(pacli);
         }
+
+        public void RemoverClientePacote(int clienteId, int pacoteId)
+        {
+            paclids.RemoverClientePacote(clienteId, pacoteId);
+        }
+
+        public List<Cliente> ListarClientesPacote(int pacoteId)
+        {
+            return paclids.ListarClientesPacote(pacoteId);
+        }
     }
 
 }

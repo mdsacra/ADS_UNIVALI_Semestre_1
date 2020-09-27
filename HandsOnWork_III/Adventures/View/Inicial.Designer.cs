@@ -62,6 +62,7 @@
             this.cadPacote = new System.Windows.Forms.Button();
             this.cadColab = new System.Windows.Forms.Button();
             this.removerPacote = new System.Windows.Forms.Button();
+            this.listarClientes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -264,9 +265,9 @@
             // 
             // vender
             // 
-            this.vender.Location = new System.Drawing.Point(413, 370);
+            this.vender.Location = new System.Drawing.Point(340, 370);
             this.vender.Name = "vender";
-            this.vender.Size = new System.Drawing.Size(105, 39);
+            this.vender.Size = new System.Drawing.Size(122, 39);
             this.vender.TabIndex = 3;
             this.vender.Text = "Vender";
             this.vender.UseVisualStyleBackColor = true;
@@ -302,11 +303,22 @@
             this.removerPacote.UseVisualStyleBackColor = true;
             this.removerPacote.Click += new System.EventHandler(this.removerPacote_Click);
             // 
+            // listarClientes
+            // 
+            this.listarClientes.Location = new System.Drawing.Point(468, 370);
+            this.listarClientes.Name = "listarClientes";
+            this.listarClientes.Size = new System.Drawing.Size(122, 39);
+            this.listarClientes.TabIndex = 6;
+            this.listarClientes.Text = "Listar Clientes do Pacote";
+            this.listarClientes.UseVisualStyleBackColor = true;
+            this.listarClientes.Click += new System.EventHandler(this.listarClientes_Click);
+            // 
             // Inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 502);
+            this.Controls.Add(this.listarClientes);
             this.Controls.Add(this.removerPacote);
             this.Controls.Add(this.cadColab);
             this.Controls.Add(this.cadPacote);
@@ -355,5 +367,6 @@
         private System.Windows.Forms.Button cadPacote;
         private System.Windows.Forms.Button cadColab;
         private System.Windows.Forms.Button removerPacote;
+        private System.Windows.Forms.Button listarClientes;
     }
 }

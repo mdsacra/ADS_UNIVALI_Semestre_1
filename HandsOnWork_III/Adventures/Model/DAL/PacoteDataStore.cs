@@ -21,20 +21,7 @@ namespace Adventures.Model.DAL
         {
             return context.Pacotes.Include(p => p.Empresa).ToList();
         }
-
-        public List<Cliente> ListarClientes(int id)
-        {
-
-            Pacote pacote = context.Pacotes
-                .Include(p => p.Clientes)
-                .ThenInclude(pc => pc.Cliente)
-                .FirstOrDefault(p => p.Id == id);
-
-            List<Cliente> clientes = pacote.Clientes.Select(pc => pc.Cliente).ToList();
-
-            return clientes;
-        }
-
+    
         public void RemoverPacote(int id)
         {
             context.Pacotes.Remove(context.Pacotes.Find(id));

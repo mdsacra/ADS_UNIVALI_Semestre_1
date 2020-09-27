@@ -114,3 +114,4 @@ C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\HandsOnWork_III\Adventures\
 C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\HandsOnWork_III\Adventures\obj\Debug\netcoreapp3.1\Adventures.View.Inicial.resources
 C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\HandsOnWork_III\Adventures\obj\Debug\netcoreapp3.1\Adventures.View.InserirCliente.resources
 C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\HandsOnWork_III\Adventures\obj\Debug\netcoreapp3.1\Adventures.Properties.Resources.resources
+C:\Users\Matheus\repositorios\ADS_UNIVALI_Semestre_1\HandsOnWork_III\Adventures\obj\Debug\netcoreapp3.1\Adventures.View.ClientesPacote.resources
